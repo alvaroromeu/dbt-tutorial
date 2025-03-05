@@ -1,0 +1,139 @@
+
+name: 'jaffle_shop'
+version: '1.0.0'
+require-dbt-version: ">=1.7.7"
+config-version: 2
+
+profile: 'metycle_bigquery'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+asset-paths: ["assets"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  metycle_dbt:
+    stg:
+      airtable:
+        +materialized: view
+        +schema: stg
+      aircall:
+        +materialized: view
+        +schema: stg
+      easybill:
+        +materialized: view
+        +schema: stg
+      exchange_rates:
+        +materialized: view
+        +schema: stg
+      google_sheets:
+        +materialized: view
+        +schema: stg
+      import:
+        +materialized: view
+        +schema: stg
+      platform:
+        +materialized: view
+        +schema: stg
+      pipedrive:
+        +materialized: view
+        +schema: stg
+      retool:
+        +materialized: view
+        +schema: stg
+      metalmetre:
+        +materialized: view
+        +schema: stg
+      metals_api:
+        +materialized: view
+        +schema: stg
+      metals_api_closing:
+        +materialized: view
+        +schema: stg
+      metals_api_open_high_low_close:
+        +materialized: view
+        +schema: stg
+      metals_api_lme_history:
+        +materialized: view
+        +schema: stg
+      share_point:
+        +materialized: view
+        +schema: stg
+      scrap_prices:
+        +materialized: view
+        +schema: stg
+      google_analytics:
+        +materialized: table
+        +schema: stg
+      margins:
+        +materialized: table
+        +schema: stg
+    int:
+      airtable:
+        +materialized: view
+        +schema: int
+      easybill:
+        +materialized: view
+        +schema: int
+      exchange_rates:
+        +materialized: view
+        +schema: int
+      google_sheets:
+        +materialized: view
+        +schema: int
+      pipedrive:
+        +materialized: table
+        +schema: int
+      platform:
+        +materialized: view
+        +schema: int
+      retool:
+        +materialized: view
+        +schema: int
+      metalmetre:
+        +materialized: view
+        +schema: int
+      metals_api:
+        +materialized: view
+        +schema: int
+      metals_api_closing:
+        +materialized: view
+        +schema: int
+      metals_api_open_high_low_close:
+        +materialized: view
+        +schema: int
+      metals_api_lme_history:
+        +materialized: view
+        +schema: int
+      lme_prices:
+        +materialized: table
+        +schema: int
+      sharepoint:
+        +materialized: table
+        +schema: int
+      scrap_prices:
+        +materialized: view
+        +schema: int
+      google_analytics:
+        +materialized: table
+        +schema: int
+      margins:
+        +materialized: table
+        +schema: int
+    marts:
+      +materialized: table
+      +schema: marts
+    platform:
+      +materialized: table
+      +schema: platform
+    zapier:
+      +materialized: table
+      +schema: zapier

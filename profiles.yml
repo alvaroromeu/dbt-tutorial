@@ -1,0 +1,19 @@
+metycle_bigquery:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: triple-student-452809-d0
+      dataset: tutorial
+      threads: 4
+      keyfile: /Users/alvaroromeu/.gc/triple-student-452809-d0-673ebf9e25b1.json
+      location: US
+    prod:
+      type: bigquery
+      method: service-account
+      project: triple-student-452809-d0
+      dataset: tutorial_prod
+      threads: 4
+      keyfile: /Users/alvaroromeu/.gc/triple-student-452809-d0-673ebf9e25b1.json
+      location: US
