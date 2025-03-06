@@ -20,55 +20,57 @@ clean-targets:
   - "dbt_packages"
 
 models:
+  jaffle_shop:
+    +materialized: table
   metycle_dbt:
     stg:
       airtable:
-        +materialized: view
+        +materialized: table
         +schema: stg
       aircall:
-        +materialized: view
+        +materialized: table
         +schema: stg
       easybill:
-        +materialized: view
+        +materialized: table
         +schema: stg
       exchange_rates:
-        +materialized: view
+        +materialized: table
         +schema: stg
       google_sheets:
-        +materialized: view
+        +materialized: table
         +schema: stg
       import:
-        +materialized: view
+        +materialized: table
         +schema: stg
       platform:
-        +materialized: view
+        +materialized: table
         +schema: stg
       pipedrive:
-        +materialized: view
+        +materialized: table
         +schema: stg
       retool:
-        +materialized: view
+        +materialized: table
         +schema: stg
       metalmetre:
-        +materialized: view
+        +materialized: table
         +schema: stg
       metals_api:
-        +materialized: view
+        +materialized: table
         +schema: stg
       metals_api_closing:
-        +materialized: view
+        +materialized: table
         +schema: stg
       metals_api_open_high_low_close:
-        +materialized: view
+        +materialized: table
         +schema: stg
       metals_api_lme_history:
-        +materialized: view
+        +materialized: table
         +schema: stg
       share_point:
-        +materialized: view
+        +materialized: table
         +schema: stg
       scrap_prices:
-        +materialized: view
+        +materialized: table
         +schema: stg
       google_analytics:
         +materialized: table
@@ -78,40 +80,40 @@ models:
         +schema: stg
     int:
       airtable:
-        +materialized: view
+        +materialized: table
         +schema: int
       easybill:
-        +materialized: view
+        +materialized: table
         +schema: int
       exchange_rates:
-        +materialized: view
+        +materialized: table
         +schema: int
       google_sheets:
-        +materialized: view
+        +materialized: table
         +schema: int
       pipedrive:
         +materialized: table
         +schema: int
       platform:
-        +materialized: view
+        +materialized: table
         +schema: int
       retool:
-        +materialized: view
+        +materialized: table
         +schema: int
       metalmetre:
-        +materialized: view
+        +materialized: table
         +schema: int
       metals_api:
-        +materialized: view
+        +materialized: table
         +schema: int
       metals_api_closing:
-        +materialized: view
+        +materialized: table
         +schema: int
       metals_api_open_high_low_close:
-        +materialized: view
+        +materialized: table
         +schema: int
       metals_api_lme_history:
-        +materialized: view
+        +materialized: table
         +schema: int
       lme_prices:
         +materialized: table
@@ -120,7 +122,7 @@ models:
         +materialized: table
         +schema: int
       scrap_prices:
-        +materialized: view
+        +materialized: table
         +schema: int
       google_analytics:
         +materialized: table
